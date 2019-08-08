@@ -1,4 +1,6 @@
-$LOAD_PATH.unshift File.expand_path("../lib", __dir__)
-require "sepa_parser"
+# frozen_string_literal: true
 
-require "minitest/autorun"
+$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
+require 'sepa_parser'
+
+require 'minitest/autorun'
