@@ -22,7 +22,6 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.7)
-    rubocop-minitest (0.0.1)
     rubocop-performance (1.3.0)
       rubocop (>= 0.68.0)
     rubocop-rails (2.2.1)
@@ -39,7 +38,6 @@ DEPENDENCIES
   minitest (~> 5.0)
   rake (~> 10.0)
   rubocop (~> 0.69)
-  rubocop-minitest
   rubocop-performance (~> 1.3.0)
   rubocop-rails (~> 2.1)
   sepa_parser!
