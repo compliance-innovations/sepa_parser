@@ -16,8 +16,6 @@ Currently pain.001.001.03 is supported.'
   spec.homepage = 'https://github.com/compliance-innovations/sepa_parser'
   spec.license = 'MIT'
 
-  spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
-
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/compliance-innovations/sepa_parser'
   spec.metadata['changelog_uri'] = 'https://github.com/compliance-innovations/sepa_parser/blob/master/CHANGELOG.md'

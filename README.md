@@ -20,7 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+file = File.new('pain.001.001.03.xml')
+result = SepaParser::SEPA.parse(file)
+```
+Returns a array with `CreditTransfer` objects containing all information relevant for each credit transfer.
 
 ## Development
 
