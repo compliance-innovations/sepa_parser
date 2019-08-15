@@ -15,6 +15,9 @@ Rails/UnknownEnv:
     - development
     - test
 
+Rails/RefuteMethods:
+  Enabled: false
+
 Metrics/BlockLength:
   Exclude:
     - '**/Guardfile'

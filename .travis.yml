@@ -1,14 +1,19 @@
----
-sudo: false
 language: ruby
 cache: bundler
-rvm:
-  - 2.5.1
-before_install: gem install bundler -v 2.0.2
+before_install: gem install bundler # https://github.com/travis-ci/travis-ci/issues/9333#issuecomment-373042916
+sudo: required
+
 jobs:
   include:
     - stage: test
-      name: "Lint"
-      script: ./rubocop
-      name: "Test"
-      script: ./rake test
+      name: "test"
+      script: ./bin/ci.sh test
+    - stage: lint
+      name: "lint"
+      script: ./bin/ci.sh lint
+
+
+branches:
+  only:
+    - master
+    - development

@@ -4,7 +4,7 @@ lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'sepa_parser/version'
 
-Gem::Specification.new do |spec|
+Gem::Specification.new do |spec| # rubocop:disable BlockLength
   spec.name = 'sepa_parser'
   spec.version = SepaParser::VERSION
   spec.authors = ['Ruben Smit', 'Martijn Bolhuis']
@@ -30,6 +30,8 @@ Currently pain.001.001.03 is supported.'
   spec.bindir = 'exe'
   spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
+
+  spec.add_dependency 'rexml'
 
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'minitest', '~> 5.0'
