@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sepa_parser (0.1.2)
+    sepa_parser (0.1.3)
       rexml
 
 GEM
