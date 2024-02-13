@@ -19,6 +19,7 @@ Currently pain.001.001.03 is supported.'
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/compliance-innovations/sepa_parser'
   spec.metadata['changelog_uri'] = 'https://github.com/compliance-innovations/sepa_parser/blob/master/CHANGELOG.md'
+  spec.metadata['rubygems_mfa_required'] = 'true'
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -28,14 +29,7 @@ Currently pain.001.001.03 is supported.'
   spec.bindir = 'exe'
   spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
-  spec.required_ruby_version = '>= 3'
+  spec.required_ruby_version = '>= 3.0'
 
   spec.add_dependency 'rexml'
-
-  spec.add_development_dependency 'bundler', '~> 2.0'
-  spec.add_development_dependency 'minitest', '~> 5.0'
-  spec.add_development_dependency 'rake', '~> 13.0'
-  spec.add_development_dependency 'rubocop', '~> 1.60'
-  spec.add_development_dependency 'rubocop-performance', '~> 1.20'
-  spec.add_development_dependency 'rubocop-rails', '~> 2.23'
 end
