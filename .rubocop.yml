@@ -4,10 +4,12 @@ require:
 
 AllCops:
   TargetRailsVersion: 5.1
+  TargetRubyVersion: 3.0
   Exclude:
     - 'vendor/**/*'
   DisplayCopNames: true
   DisplayStyleGuide: true
+  NewCops: enable
 
 Rails/UnknownEnv:
   Environments:
@@ -26,7 +28,7 @@ Metrics/BlockLength:
     - 'config/routes.rb'
     - 'test/**/*'
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
 
 Metrics/MethodLength:
