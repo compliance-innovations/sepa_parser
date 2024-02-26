@@ -11,7 +11,7 @@ module SepaParser
   class SEPA
     include REXML
 
-    def self.parse(data) # rubocop:disable MethodLength, AbcSize
+    def self.parse(data) # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
       document = Document.new data
       credit_transfers = []
 
@@ -26,7 +26,8 @@ module SepaParser
                                 get_element_text(document, 'Document/CstmrCdtTrfInitn/PmtInf/Dbtr/Nm'),
                                 get_element_text(document, 'Document/CstmrCdtTrfInitn/PmtInf/DbtrAcct/Id/IBAN'),
                                 get_element_text_if_exists(document, 'Document/CstmrCdtTrfInitn/PmtInf/DbtrAcct/Ccy'),
-                                get_element_text_if_exists(document, 'Document/CstmrCdtTrfInitn/PmtInf/DbtrAgt/FinInstnId/BIC'),
+                                get_element_text_if_exists(document,
+                                                           'Document/CstmrCdtTrfInitn/PmtInf/DbtrAgt/FinInstnId/BIC'),
                                 get_element_text(transfer, 'PmtId/EndToEndId'),
                                 get_element_text(transfer, 'Amt/InstdAmt'),
                                 get_element_attribute(transfer, 'Amt/InstdAmt', 'Ccy'),
